@@ -1,27 +1,35 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>J-35</title>
+    <title>J-35 Shenyang</title>
 
     <style>
-        /* IMÁGEN DE FONDO DE TODA LA PÁGINA */
-      body {
-    margin: 0;
-    min-height: 100vh;
-    box-sizing: border-box;
+        /* CONFIGURACIÓN GENERAL */
+        * {
+            box-sizing: border-box;
+        }
 
-    background-image: url("fondo.jpg");
-    background-size: 100% 100%;
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
+        html {
+            min-height: 100%;
+        }
 
-    padding-left: 5px;
-}
+        /* FONDO: IMAGEN EN PANTALLAS GRANDES Y CELESTE EN CELULARES */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding-left: 5px;
+
+            background-color: #dff5ff;
+            background-image: url("fondo.jpg");
+            background-size: 100% 100%;
+            background-position: top left;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+        }
 
         /* TAMAÑOS ORIGINALES DE LAS IMÁGENES */
         #im1 {
@@ -37,12 +45,10 @@
             width: 460px;
         }
 
-        #im4 {
-            height: 200px;
-        }
-
+        #im4,
         #im5 {
             height: 200px;
+            width: auto;
         }
 
         #im6 {
@@ -52,6 +58,7 @@
 
         #im7 {
             height: 360px;
+            width: auto;
         }
 
         #im8 {
@@ -59,22 +66,59 @@
             width: 460px;
         }
 
-        /* ESTILOS ORIGINALES DE LOS TÍTULOS */
+        /* ESTILO ORIGINAL DEL TÍTULO */
         h1 {
             font-family: impact, charcoal, fantasy, sans-serif;
             text-align: center;
         }
 
-        /* ADAPTACIÓN GENERAL DE LAS IMÁGENES */
+        /* IMÁGENES RESPONSIVAS */
         img {
             max-width: 100%;
+            height: auto;
+            vertical-align: middle;
         }
 
-        /* DISEÑO RESPONSIVE PARA CELULARES */
+        /* BOTÓN PARA IR A LA OTRA PÁGINA */
+        .contenedor-boton {
+            display: flex;
+            justify-content: center;
+            margin: 36px 0 24px;
+            padding: 16px 0;
+        }
+
+        .boton-mas-informacion {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 8px;
+            background-color: #123c5a;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .boton-mas-informacion:hover {
+            background-color: #1d5c83;
+        }
+
+        .boton-mas-informacion:focus-visible {
+            outline: 3px solid #111111;
+            outline-offset: 3px;
+        }
+
+        /* CELULARES: FONDO CELESTE LISO, SIN IMAGEN */
         @media screen and (max-width: 600px) {
 
+            body {
+                padding: 0 15px;
+                background-image: none;
+                background-color: #dff5ff;
+            }
+
             img {
-                width: auto;
                 max-width: 100%;
                 height: auto !important;
             }
@@ -86,6 +130,11 @@
             #im8 {
                 width: 100%;
             }
+
+            .boton-mas-informacion {
+                max-width: 100%;
+                padding: 13px 22px;
+            }
         }
     </style>
 </head>
@@ -96,7 +145,7 @@
 
     <h2>El J-35 Shenyang</h2>
 
-    <img id="im1" src="foto%20%282%29.jpg">
+    <img id="im1" src="foto%20%282%29.jpg" alt="Avión de combate J-35 Shenyang">
 
     <p>
         El J-35 Shenyang es un caza de quinta generación. Este avión es
@@ -132,7 +181,7 @@
 
     <h2>Su nacimiento</h2>
 
-    <img id="im2" src="foto%20%283%29.jpg">
+    <img id="im2" src="foto%20%283%29.jpg" alt="Avión Shenyang FC-31">
 
     <p>
         El Shenyang J-35 fue desarrollado a partir del demostrador Shenyang
@@ -160,9 +209,9 @@
 
     <h2>Diferencias entre el J-35 Shenyang y el J-35A</h2>
 
-    <img id="im3" src="foto%20%285%29.jpg">
+    <img id="im3" src="foto%20%285%29.jpg" alt="Comparación del J-35A">
 
-    <img id="im8" src="foto%20%284%29.jpg">
+    <img id="im8" src="foto%20%284%29.jpg" alt="Comparación del J-35 naval">
 
     <h4>Las diferencias principales que se pueden notar son:</h4>
 
@@ -203,21 +252,18 @@
 
     <ul>
         <li>
-            PL-10 (corto alcance).
-            <br>
-            <img id="im4" src="foto%20%288%29.jpg%20">
+            PL-10 (corto alcance).<br>
+            <img id="im4" src="foto%20%288%29.jpg" alt="Misil PL-10">
         </li>
 
         <li>
-            PL-15 (largo alcance, guiados por radar AESA activo).
-            <br>
-            <img id="im5" src="foto%20%281%29.jpg">
+            PL-15 (largo alcance, guiados por radar AESA activo).<br>
+            <img id="im5" src="foto%20%281%29.jpg" alt="Misil PL-15">
         </li>
 
         <li>
-            PL-21 (de muy largo alcance).
-            <br>
-            <img id="im6" src="foto%20%287%29.jpg">
+            PL-21 (de muy largo alcance).<br>
+            <img id="im6" src="foto%20%287%29.jpg" alt="Misil PL-21">
         </li>
     </ul>
 
@@ -260,7 +306,7 @@
 
     <h4>J-35 vs. F-35C:</h4>
 
-    <img id="im7" src="foto%20%286%29.jpg">
+    <img id="im7" src="foto%20%286%29.jpg" alt="Comparación entre el J-35 y el F-35C">
 
     <p>
         El F-35C de la Marina estadounidense es el rival simétrico contra el cual
@@ -317,6 +363,15 @@
         Es bimotor, monoplaza y tiene gran variedad de armamento, como pueden
         ser bombas, misiles, etc.
     </p>
+
+
+    <!-- BOTÓN PARA IR A LENCINASWEB -->
+    <div class="contenedor-boton">
+        <a class="boton-mas-informacion"
+           href="https://maxifusco.github.io/LencinasWeb/">
+            Más Información
+        </a>
+    </div>
 
 </body>
 
